@@ -22,5 +22,5 @@ class Command(BaseCommand):
                 phone.get('image'),
                 phone.get('release_date'),
                 phone.get('lte_exists'),
-                slugify(phone.get('name'), unique=True))
+                slugify(phone.get('name')))
             phone_model.save()

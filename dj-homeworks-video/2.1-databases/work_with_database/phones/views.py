@@ -12,11 +12,11 @@ def show_catalog(request):
     sort = request.GET.get('sort')
     if sort:
         if sort == 'name':
-            object = Phone.object.all().order_by('name')
+            object = Phone.objects.order_by('name')
         elif sort == 'min_price':
-            object = Phone.objects.all().order_by('price')
+            object = Phone.objects.order_by('price')
         elif sort == 'max_price':
-            object = Phone.objects.all().order_by('-price')
+            object = Phone.objects.order_by('-price')
     else:
         object = Phone.objects.all()
 
